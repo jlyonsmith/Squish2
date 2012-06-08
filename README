@@ -1,0 +1,5 @@
+==Squish DXT Compression Library==
+
+This is a currently a managed (.NET/Mono) wrapper around the Squish DXT compression library written by Simon Brown and available at [[http://code.google.com/p/libsquish/|Squish on Google Code]].
+
+The primary purpose of this library is incorporation into the [[https://github.com/jlyonsmith/playroom|Playroom]] project for use as an XNA content compiler for bitmaps.  Playroom is intended to be used in conjunction with the [[https://github.com/mono/MonoGame|MonoGame]] project.
