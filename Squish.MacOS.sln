@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Squishy", "Squish\Squish.vcxproj", "{38EB97E7-1D18-4DE9-B946-831580817156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquishPng", "SquishPng\SquishPng.csproj", "{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquishTest", "SquishTest\SquishTest.csproj", "{9354D0A6-0F55-4592-8F50-2115AFA61647}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Debug|Win32.ActiveCfg = Debug|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Debug|Win32.Build.0 = Debug|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Debug|x86.ActiveCfg = Debug|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Release|Win32.ActiveCfg = Release|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Release|Win32.Build.0 = Release|Win32
+		{38EB97E7-1D18-4DE9-B946-831580817156}.Release|x86.ActiveCfg = Release|Win32
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Win32.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|x86.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|x86.Build.0 = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Win32.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|x86.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|x86.Build.0 = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Win32.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|x86.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|x86.Build.0 = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Win32.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|x86.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
