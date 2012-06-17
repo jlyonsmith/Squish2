@@ -26,8 +26,15 @@
 #ifndef SQUISH_H
 #define SQUISH_H
 
-//! All squish API functions live in this namespace.
-namespace squish {
+#ifdef WINDOWS
+  #ifdef SQUISH_EXPORTS
+    #define SQUISH_API __declspec(dllexport) _stdcall
+  #else
+    #define SQUISH_API __declspec(dllimport) _stdcall
+  #endif
+#else
+  #define SQUISH_API
+#endif
 
 // -----------------------------------------------------------------------------
 
@@ -39,31 +46,31 @@ typedef unsigned char u8;
 enum
 {
 	//! Use DXT1 compression.
-	kDxt1 = ( 1 << 0 ), 
+	squishDxt1 = ( 1 << 0 ), 
 	
 	//! Use DXT3 compression.
-	kDxt3 = ( 1 << 1 ), 
+	squishDxt3 = ( 1 << 1 ), 
 	
 	//! Use DXT5 compression.
-	kDxt5 = ( 1 << 2 ), 
+	squishDxt5 = ( 1 << 2 ), 
 	
 	//! Use a very slow but very high quality colour compressor.
-	kColourIterativeClusterFit = ( 1 << 8 ),	
+	squishColourIterativeClusterFit = ( 1 << 8 ),	
 	
 	//! Use a slow but high quality colour compressor (the default).
-	kColourClusterFit = ( 1 << 3 ),	
+	squishColourClusterFit = ( 1 << 3 ),	
 	
 	//! Use a fast but low quality colour compressor.
-	kColourRangeFit	= ( 1 << 4 ),
+	squishColourRangeFit	= ( 1 << 4 ),
 	
 	//! Use a perceptual metric for colour error (the default).
-	kColourMetricPerceptual = ( 1 << 5 ),
+	squishColourMetricPerceptual = ( 1 << 5 ),
 
 	//! Use a uniform metric for colour error.
-	kColourMetricUniform = ( 1 << 6 ),
+	squishColourMetricUniform = ( 1 << 6 ),
 	
 	//! Weight the colour by alpha during cluster fit (disabled by default).
-	kWeightColourByAlpha = ( 1 << 7 )
+	squishWeightColourByAlpha = ( 1 << 7 )
 };
 
 // -----------------------------------------------------------------------------
@@ -79,25 +86,25 @@ enum
 	
 		{ r1, g1, b1, a1, .... , r16, g16, b16, a16 }
 	
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. When using DXT1 
 	compression, 8 bytes of storage are required for the compressed DXT block. 
 	DXT3 and DXT5 compression require 16 bytes of storage per block.
 	
 	The flags parameter can also specify a preferred colour compressor and 
 	colour error metric to use when fitting the RGB components of the data. 
-	Possible colour compressors are: kColourClusterFit (the default), 
-	kColourRangeFit or kColourIterativeClusterFit. Possible colour error metrics 
-	are: kColourMetricPerceptual (the default) or kColourMetricUniform. If no 
+	Possible colour compressors are: squishColourClusterFit (the default), 
+	squishColourRangeFit or squishColourIterativeClusterFit. Possible colour error metrics 
+	are: squishColourMetricPerceptual (the default) or squishColourMetricUniform. If no 
 	flags are specified in any particular category then the default will be 
 	used. Unknown flags are ignored.
 	
-	When using kColourClusterFit, an additional flag can be specified to
+	When using squishColourClusterFit, an additional flag can be specified to
 	weight the colour of each pixel by its alpha value. For images that are
 	rendered using alpha blending, this can significantly increase the 
 	perceived quality.
 */
-void Compress( u8 const* rgba, void* block, int flags );
+extern "C" void SQUISH_API SquishCompress( u8 const* rgba, void* block, int flags );
 
 // -----------------------------------------------------------------------------
 
@@ -120,25 +127,25 @@ void Compress( u8 const* rgba, void* block, int flags );
 	is in the CompressImage function to disable pixels outside the bounds of
 	the image when the width or height is not divisible by 4.
 	
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. When using DXT1 
 	compression, 8 bytes of storage are required for the compressed DXT block. 
 	DXT3 and DXT5 compression require 16 bytes of storage per block.
 	
 	The flags parameter can also specify a preferred colour compressor and 
 	colour error metric to use when fitting the RGB components of the data. 
-	Possible colour compressors are: kColourClusterFit (the default), 
-	kColourRangeFit or kColourIterativeClusterFit. Possible colour error metrics 
-	are: kColourMetricPerceptual (the default) or kColourMetricUniform. If no 
+	Possible colour compressors are: squishColourClusterFit (the default), 
+	squishColourRangeFit or squishColourIterativeClusterFit. Possible colour error metrics 
+	are: squishColourMetricPerceptual (the default) or squishColourMetricUniform. If no 
 	flags are specified in any particular category then the default will be 
 	used. Unknown flags are ignored.
 	
-	When using kColourClusterFit, an additional flag can be specified to
+	When using squishColourClusterFit, an additional flag can be specified to
 	weight the colour of each pixel by its alpha value. For images that are
 	rendered using alpha blending, this can significantly increase the 
 	perceived quality.
 */
-void CompressMasked( u8 const* rgba, int mask, void* block, int flags );
+extern "C" void SQUISH_API SquishCompressMasked( u8 const* rgba, int mask, void* block, int flags );
 
 // -----------------------------------------------------------------------------
 
@@ -153,11 +160,11 @@ void CompressMasked( u8 const* rgba, int mask, void* block, int flags );
 	
 		{ r1, g1, b1, a1, .... , r16, g16, b16, a16 }
 	
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. All other flags 
 	are ignored.
 */
-void Decompress( u8* rgba, void const* block, int flags );
+extern "C" void SQUISH_API SquishDecompress( u8* rgba, void const* block, int flags );
 
 // -----------------------------------------------------------------------------
 
@@ -167,7 +174,7 @@ void Decompress( u8* rgba, void const* block, int flags );
 	@param height	The height of the image.
 	@param flags	Compression flags.
 	
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. All other flags 
 	are ignored.
 	
@@ -175,7 +182,7 @@ void Decompress( u8* rgba, void const* block, int flags );
 	function supports arbitrary size images by allowing the outer blocks to
 	be only partially used.
 */
-int GetStorageRequirements( int width, int height, int flags );
+extern "C" int SQUISH_API SquishGetStorageRequirements( int width, int height, int flags );
 
 // -----------------------------------------------------------------------------
 
@@ -192,20 +199,20 @@ int GetStorageRequirements( int width, int height, int flags );
 	
 		{ r1, g1, b1, a1, .... , rn, gn, bn, an } for n = width*height
 		
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. When using DXT1 
 	compression, 8 bytes of storage are required for each compressed DXT block. 
 	DXT3 and DXT5 compression require 16 bytes of storage per block.
 	
 	The flags parameter can also specify a preferred colour compressor and 
 	colour error metric to use when fitting the RGB components of the data. 
-	Possible colour compressors are: kColourClusterFit (the default), 
-	kColourRangeFit or kColourIterativeClusterFit. Possible colour error metrics 
-	are: kColourMetricPerceptual (the default) or kColourMetricUniform. If no 
+	Possible colour compressors are: squishColourClusterFit (the default), 
+	squishColourRangeFit or squishColourIterativeClusterFit. Possible colour error metrics 
+	are: squishColourMetricPerceptual (the default) or squishColourMetricUniform. If no 
 	flags are specified in any particular category then the default will be 
 	used. Unknown flags are ignored.
 	
-	When using kColourClusterFit, an additional flag can be specified to
+	When using squishColourClusterFit, an additional flag can be specified to
 	weight the colour of each pixel by its alpha value. For images that are
 	rendered using alpha blending, this can significantly increase the 
 	perceived quality.
@@ -214,7 +221,7 @@ int GetStorageRequirements( int width, int height, int flags );
 	much memory is required in the compressed image, use
 	squish::GetStorageRequirements.
 */
-void CompressImage( u8 const* rgba, int width, int height, void* blocks, int flags );
+extern "C" void SQUISH_API SquishCompressImage( u8 const* rgba, int width, int height, void* blocks, int flags );
 
 // -----------------------------------------------------------------------------
 
@@ -231,17 +238,15 @@ void CompressImage( u8 const* rgba, int width, int height, void* blocks, int fla
 	
 		{ r1, g1, b1, a1, .... , rn, gn, bn, an } for n = width*height
 		
-	The flags parameter should specify either kDxt1, kDxt3 or kDxt5 compression, 
+	The flags parameter should specify either squishDxt1, squishDxt3 or squishDxt5 compression, 
 	however, DXT1 will be used by default if none is specified. All other flags 
 	are ignored.
 
-	Internally this function calls squish::Decompress for each block.
+	Internally this function calls SquishDecompress for each block.
 */
-void DecompressImage( u8* rgba, int width, int height, void const* blocks, int flags );
+extern "C" void SQUISH_API SquishDecompressImage( u8* rgba, int width, int height, void const* blocks, int flags );
 
 // -----------------------------------------------------------------------------
-
-} // namespace squish
 
 #endif // ndef SQUISH_H
 

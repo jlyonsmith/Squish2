@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}</ProjectGuid>
+    <Target>Bin</Target>
+    <Language>CPP</Language>
+    <Compiler>
+      <Compiler ctype="GppCompiler" />
+    </Compiler>
+    <ReleaseVersion>2.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineSymbols>DEBUG MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <OutputName>Squish2</OutputName>
+    <CompileTarget>SharedLibrary</CompileTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <DefineSymbols>MONODEVELOP</DefineSymbols>
+    <SourceDirectory>.</SourceDirectory>
+    <OptimizationLevel>3</OptimizationLevel>
+    <OutputName>Squish2</OutputName>
+    <CompileTarget>SharedLibrary</CompileTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="alpha.cpp" />
+    <Compile Include="clusterfit.cpp" />
+    <Compile Include="colourblock.cpp" />
+    <Compile Include="colourfit.cpp" />
+    <Compile Include="colourset.cpp" />
+    <Compile Include="maths.cpp" />
+    <Compile Include="rangefit.cpp" />
+    <Compile Include="singlecolourfit.cpp" />
+    <Compile Include="squish.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="alpha.h" />
+    <None Include="clusterfit.h" />
+    <None Include="colourblock.h" />
+    <None Include="colourfit.h" />
+    <None Include="colourset.h" />
+    <None Include="config.h" />
+    <None Include="maths.h" />
+    <None Include="rangefit.h" />
+    <None Include="simd_float.h" />
+    <None Include="simd_sse.h" />
+    <None Include="simd_ve.h" />
+    <None Include="simd.h" />
+    <None Include="singlecolourfit.h" />
+    <None Include="singlecolourlookup.inl" />
+    <None Include="squish.h" />
+  </ItemGroup>
+</Project>
