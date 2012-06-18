@@ -13,7 +13,7 @@
     </Compiler>
     <Packages>
       <Packages>
-        <Package file="/Users/john/Projects/Squish2/Squish2/Squish2.md.pc" name="Squish2" IsProject="true" />
+        <Package file="/Users/john/Projects/Squish2/Squish2/Squish2.MacOS.md.pc" name="Squish2.MacOS" IsProject="true" />
       </Packages>
     </Packages>
     <ReleaseVersion>2.0</ReleaseVersion>

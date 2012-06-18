@@ -1,5 +1,0 @@
-Name: Squish2
-Description: 
-Version: 2.0
-Libs: -L"/Users/john/Projects/Squish2/Squish2/bin/Debug" -lSquish2
-Cflags: -I"/Users/john/Projects/Squish2/Squish2"
