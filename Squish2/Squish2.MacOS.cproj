@@ -29,17 +29,6 @@
     <OutputName>Squish2</OutputName>
     <CompileTarget>SharedLibrary</CompileTarget>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|MacOS|AnyCPU' ">
-    <OutputPath>.</OutputPath>
-    <SourceDirectory>.</SourceDirectory>
-    <CompileTarget>Bin</CompileTarget>
-    <OutputName />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|MacOS|AnyCPU' ">
-    <OutputPath>.</OutputPath>
-    <CompileTarget>Bin</CompileTarget>
-    <OutputName />
-  </PropertyGroup>
   <ItemGroup>
     <Compile Include="alpha.cpp" />
     <Compile Include="clusterfit.cpp" />
