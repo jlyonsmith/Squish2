@@ -11,12 +11,12 @@
     <Compiler>
       <Compiler ctype="GppCompiler" />
     </Compiler>
+    <ReleaseVersion>2.0</ReleaseVersion>
     <Packages>
       <Packages>
-        <Package file="/Users/john/Projects/Squish2/Squish2/Squish2.md.pc" name="Squish2" IsProject="true" />
+        <Package file="/Users/john/Projects/Squish2/Squish2/Squish2.MacOS.md.pc" name="Squish2.MacOS" IsProject="true" />
       </Packages>
     </Packages>
-    <ReleaseVersion>2.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +64,7 @@
     <Libs>
       <Libs>
         <Lib>png</Lib>
+        <Lib>z</Lib>
       </Libs>
     </Libs>
   </PropertyGroup>

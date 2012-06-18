@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "Squish2.MacOS", "Squish2\Squish2.MacOS.cproj", "{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "SquishGen.MacOS", "SquishGen\SquishGen.MacOS.cproj", "{1F27A45E-02F3-45DC-B5F0-7D9D72212C69}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "SquishPng.MacOS", "SquishPng\SquishPng.MacOS.cproj", "{F97AE78C-A8BA-4464-A605-BD549D4F377D}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "SquishTest.MacOS", "SquishTest\SquishTest.MacOS.cproj", "{BCEC4528-6397-4293-B1F0-AC23F03D144F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|MacOS = Debug|MacOS
+		Release|MacOS = Release|MacOS
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F27A45E-02F3-45DC-B5F0-7D9D72212C69}.Debug|MacOS.ActiveCfg = Debug|Any CPU
+		{1F27A45E-02F3-45DC-B5F0-7D9D72212C69}.Debug|MacOS.Build.0 = Debug|Any CPU
+		{1F27A45E-02F3-45DC-B5F0-7D9D72212C69}.Release|MacOS.ActiveCfg = Release|Any CPU
+		{1F27A45E-02F3-45DC-B5F0-7D9D72212C69}.Release|MacOS.Build.0 = Release|Any CPU
+		{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}.Debug|MacOS.ActiveCfg = Debug|Any CPU
+		{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}.Debug|MacOS.Build.0 = Debug|Any CPU
+		{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}.Release|MacOS.ActiveCfg = Release|Any CPU
+		{B9EDFED1-366E-4B0B-9C8A-32AE76B7F402}.Release|MacOS.Build.0 = Release|Any CPU
+		{BCEC4528-6397-4293-B1F0-AC23F03D144F}.Debug|MacOS.ActiveCfg = Debug|Any CPU
+		{BCEC4528-6397-4293-B1F0-AC23F03D144F}.Debug|MacOS.Build.0 = Debug|Any CPU
+		{BCEC4528-6397-4293-B1F0-AC23F03D144F}.Release|MacOS.ActiveCfg = Release|Any CPU
+		{BCEC4528-6397-4293-B1F0-AC23F03D144F}.Release|MacOS.Build.0 = Release|Any CPU
+		{F97AE78C-A8BA-4464-A605-BD549D4F377D}.Debug|MacOS.ActiveCfg = Debug|Any CPU
+		{F97AE78C-A8BA-4464-A605-BD549D4F377D}.Debug|MacOS.Build.0 = Debug|Any CPU
+		{F97AE78C-A8BA-4464-A605-BD549D4F377D}.Release|MacOS.ActiveCfg = Release|Any CPU
+		{F97AE78C-A8BA-4464-A605-BD549D4F377D}.Release|MacOS.Build.0 = Release|Any CPU
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|Win32.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|x86.ActiveCfg = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Debug|x86.Build.0 = Debug|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|Win32.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|x86.ActiveCfg = Release|x86
+		{4432473A-11F8-42D4-AEBE-CC6C27E6CFE0}.Release|x86.Build.0 = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|Win32.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|x86.ActiveCfg = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Debug|x86.Build.0 = Debug|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|Win32.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|x86.ActiveCfg = Release|x86
+		{9354D0A6-0F55-4592-8F50-2115AFA61647}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Squish2\Squish2.MacOS.cproj
+		description = Shared library version of Simon Brown's DXT compression library.
+		version = 2.0
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
