@@ -12,6 +12,8 @@
 *.userprefs
 *.resources
 *.opensdf
+*.o
+*.d
 thumbs.db
 UpgradeLog.xml
 ipch/
